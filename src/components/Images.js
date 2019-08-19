@@ -5,6 +5,8 @@ import Spinner from './Spinner'
 import CatImage from './CatImage'
 import { fetchImages } from '../store/actions'
 
+import styles from '../../assets/images.css'
+
 const Images = (props) => {
 
   function handleLoadMoreClick() {
@@ -13,16 +15,18 @@ const Images = (props) => {
 
   if(props.selectedCategory) {
     return (
-      <div className='images-list'>
+      <div className='images'>
         {props.images.map(image =>
           <CatImage src={image.url} key={image.id} />
         )}
 
         {props.imagesFetching && <Spinner />}
 
-        <button onClick={handleLoadMoreClick} className='action-load-more'>
-          Load more cats
-        </button>
+        <div className='button-container'>
+          <button onClick={handleLoadMoreClick} className='action-load-more'>
+              Load more cats
+          </button>
+        </div>
       </div>
     )
   } else {

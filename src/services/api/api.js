@@ -1,7 +1,7 @@
 const API = {
   categoriesURL: 'https://api.thecatapi.com/v1/categories',
   imagesURL: 'https://api.thecatapi.com/v1/images/search?order=ASC',
-  imagesPerPage: 3,
+  imagesPerPage: 8,
 
   fetchCategories: async function() {
     const requestData = await fetch(this.categoriesURL);

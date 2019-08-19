@@ -1,0 +1,30 @@
+.categories {
+  min-width: 270px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.category {
+  padding: 15px 15px;
+  transition: 0.25s ease;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #6f056f;
+}
+
+.category:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.no-category {
+  flex-grow: 2;
+  text-align: center;
+  padding: 100px 0;
+  margin-left: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}

@@ -1,10 +1,12 @@
 import React from 'react'
 
-import spinner from '../../assets/spinner.css'
+import styles from '../../assets/spinner.css'
 
 const Spinner = () => {
   return (
-    <div className='spinner'>
+    <div className='spinner-wrapper'>
+      <div className='spinner'>
+      </div>
     </div>
   )
 }

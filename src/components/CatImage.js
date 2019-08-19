@@ -5,8 +5,8 @@ const Image = (props) => {
   const [isLoaded, setLoaded] = useState(false);
 
   return (
-    <div className='cat-image'>
-      <img src={props.src} onLoad={() => setLoaded(true)} className={isLoaded ? 'loaded' : ''} />
+    <div className={`cat-image ${isLoaded ? '' : 'loading'}`}>
+      <img src={props.src} onLoad={() => setLoaded(true)} />
     </div>
   )
   

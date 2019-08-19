@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import Spinner from './Spinner'
 import { fetchCategories, selectCategory } from '../store/actions'
 
+import styles from '../../assets/categories.css'
+
 const Categories = (props) => {
 
   const [isFetching, setFetchingStatus] = useState(true);
@@ -21,7 +23,7 @@ const Categories = (props) => {
   }
 
   return (
-    <div className='categories-list'>
+    <div className='categories'>
       {isFetching && <Spinner />}
 
       {props.categories.map(category =>
