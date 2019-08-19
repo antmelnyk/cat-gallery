@@ -1,22 +1,15 @@
 import React from 'react'
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
+import store from '../store/index'
 
-import appReducer from '../store/reducer'
+import CategoriesList from './CategoriesList'
 
-const store = createStore(
-  appReducer,
-  composeWithDevTools(
-    applyMiddleware(thunk)
-  )
-);
-
-export default function App() {
+const App = () => {
   return (
     <Provider store={store}>
-
+      <CategoriesList />
     </Provider>
   )
 }
+
+export default App
