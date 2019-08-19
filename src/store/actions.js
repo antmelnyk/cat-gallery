@@ -25,11 +25,11 @@ export function fetchCategories() {
 }
 
 export function selectCategory(categoryId) {
-  return async (dispatch) => {
+  return (dispatch) => {
     
     dispatch({ type: SET_SELECTED_CATEGORY, categoryId });
 
-    dispatch(fetchImages(categoryId));
+    return dispatch(fetchImages(categoryId));
 
   }
 }

@@ -40,9 +40,6 @@ export default function appReducer(state = initialState, action) {
       }
 
     case FETCH_IMAGES_SUCCESS:      
-      console.log(state.images);
-      console.log(action.images);
-
       return {
         ...state,
         images: [...state.images, ...action.images],

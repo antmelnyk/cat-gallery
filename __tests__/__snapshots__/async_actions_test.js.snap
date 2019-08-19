@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Async actions dispatches FETCH_IMAGES_SUCCESS when category is selected 1`] = `
+Array [
+  Object {
+    "categoryId": 1,
+    "type": "SET_SELECTED_CATEGORY",
+  },
+  Object {
+    "type": "FETCH_IMAGES_REQUEST",
+  },
+  Object {
+    "images": Array [],
+    "type": "FETCH_IMAGES_SUCCESS",
+  },
+]
+`;
+
+exports[`Async actions dispatches FETCH_IMAGES_SUCCESS when images are fetched 1`] = `
+Array [
+  Object {
+    "type": "FETCH_IMAGES_REQUEST",
+  },
+  Object {
+    "images": Array [],
+    "type": "FETCH_IMAGES_SUCCESS",
+  },
+]
+`;
+
+exports[`Async actions dispatches FETCH_TODO_FAILURE when categories are not fetched 1`] = `
+Array [
+  Object {
+    "type": "FETCH_CATEGORIES_REQUEST",
+  },
+  Object {
+    "error": [Error: Something went wrong. Please, try again later.],
+    "type": "FETCH_REQUEST_FAILURE",
+  },
+]
+`;
+
+exports[`Async actions dispatches FETCH_TODO_SUCCESS when categories are fetched 1`] = `
+Array [
+  Object {
+    "type": "FETCH_CATEGORIES_REQUEST",
+  },
+  Object {
+    "categories": Array [
+      Object {
+        "id": 1,
+        "name": "Test",
+      },
+    ],
+    "type": "FETCH_CATEGORIES_SUCCESS",
+  },
+]
+`;

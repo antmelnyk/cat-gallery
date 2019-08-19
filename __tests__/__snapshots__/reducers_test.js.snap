@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`appReducer has to return the initial state 1`] = `
+Object {
+  "categories": Array [],
+  "error": "",
+  "images": Array [],
+  "imagesFetching": false,
+  "pagesLoaded": 0,
+  "selectedCategory": null,
+}
+`;
+
+exports[`appReducer should handle FETCH_CATEGORIES_SUCCESS 1`] = `
+Object {
+  "categories": Array [
+    Object {
+      "id": 0,
+      "name": "Test",
+    },
+  ],
+  "error": "",
+  "images": Array [],
+  "imagesFetching": false,
+  "pagesLoaded": 0,
+  "selectedCategory": null,
+}
+`;
+
+exports[`appReducer should handle FETCH_IMAGES_SUCCESS 1`] = `
+Object {
+  "categories": Array [],
+  "error": "",
+  "images": Array [
+    Object {
+      "id": 0,
+      "url": "url",
+    },
+  ],
+  "imagesFetching": false,
+  "pagesLoaded": 1,
+  "selectedCategory": null,
+}
+`;
+
+exports[`appReducer should handle FETCH_REQUEST_FAILURE 1`] = `
+Object {
+  "categories": Array [],
+  "error": "Error",
+  "images": Array [],
+  "imagesFetching": false,
+  "pagesLoaded": 0,
+  "selectedCategory": null,
+}
+`;
+
+exports[`appReducer should handle SET_SELECTED_CATEGORY 1`] = `
+Object {
+  "categories": Array [],
+  "error": "",
+  "images": Array [],
+  "imagesFetching": false,
+  "pagesLoaded": 0,
+  "selectedCategory": 0,
+}
+`;
