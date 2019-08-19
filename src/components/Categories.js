@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 
 import Spinner from './Spinner'
-import { fetchCategories } from '../store/actions'
+import { fetchCategories, selectCategory } from '../store/actions'
 
-const CategoriesList = (props) => {
+const Categories = (props) => {
 
   const [isFetching, setFetchingStatus] = useState(true);
 
@@ -16,8 +16,8 @@ const CategoriesList = (props) => {
     }
   }, [props.categories]);
 
-  function handleCategorySelection() {
-    props.selectCategory()
+  function handleCategorySelection(categoryId) {   
+    props.selectCategory(categoryId)
   }
 
   return (
@@ -25,7 +25,7 @@ const CategoriesList = (props) => {
       {isFetching && <Spinner />}
 
       {props.categories.map(category =>
-        <div onClick={handleCategorySelection} className='category' key={category.id}>
+        <div onClick={() => handleCategorySelection(category.id)} className='category' key={category.id}>
           { category.name }
         </div>
       )}
@@ -37,5 +37,8 @@ const CategoriesList = (props) => {
 const mapStateToProps = state => ({
   categories: state.categories
 })
-const mapDispatchToProps = { fetchCategories, selectCategory }
-export default connect(mapStateToProps, mapDispatchToProps)(CategoriesList)
+const mapDispatchToProps = { 
+  fetchCategories,
+  selectCategory
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Categories)
