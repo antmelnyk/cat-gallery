@@ -20,7 +20,7 @@ body {
 
 .app-title {
   flex-basis: 100%;
-  text-align: center;
+  margin: 20px 0;
+  text-align: right;
   color: #6f056f;
-  margin: 0 0 20px 0;
 }
