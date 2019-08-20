@@ -57,7 +57,7 @@ describe('Async actions', () => {
 
   it('dispatches FETCH_IMAGES_SUCCESS when category is selected', () => { 
     nock('https://api.thecatapi.com')
-      .get('/v1/images/search?order=ASC&category_ids=1&page=0&limit=8')
+      .get('/v1/images/search?order=ASC&category_ids=1&page=0&limit=10')
       .reply(200, fetchImagesData);
       
     return store.dispatch(selectCategory(1))
@@ -68,7 +68,7 @@ describe('Async actions', () => {
 
   it('dispatches FETCH_IMAGES_SUCCESS when images are fetched', () => {
     nock('https://api.thecatapi.com')
-      .get('/v1/images/search?order=ASC&category_ids=1&page=0&limit=8')
+      .get('/v1/images/search?order=ASC&category_ids=1&page=0&limit=10')
       .reply(200, fetchImagesData);
 
     return store.dispatch(fetchImages())
