@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Spinner from './Spinner'
 import { fetchCategories, selectCategory } from '../store/actions'
 
-import styles from '../../assets/categories.css'
+import styles from '../../assets/css/categories.css'
 
 const Categories = (props) => {
 

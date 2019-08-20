@@ -5,7 +5,7 @@ import store from '../store/index'
 import Categories from './Categories'
 import Images from './Images'
 
-import styles from '../../assets/main.css'
+import styles from '../../assets/css/main.css'
 
 const App = () => {
   return (

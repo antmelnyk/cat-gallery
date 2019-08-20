@@ -1,7 +1,7 @@
 .images {
   display: flex;
   flex-wrap: wrap;
-  width: calc(1200px - 270px);
+  width: calc(1200px - 245px);
 }
 
 .cat-image {
@@ -44,4 +44,24 @@ button.action-load-more {
 
 button.action-load-more:hover {
   background: #8d0f8d;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .images {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cat-image {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .cat-image {
+    width: 100%;
+    height: auto;
+  }
 }

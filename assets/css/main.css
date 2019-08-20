@@ -20,7 +20,20 @@ body {
 
 .app-title {
   flex-basis: 100%;
-  margin: 20px 0;
-  text-align: right;
+  margin: 20px 10px;
+  text-align: left;
   color: #6f056f;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #app {
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .app-title {
+    text-align: center;
+  }
 }

@@ -5,7 +5,7 @@ import Spinner from './Spinner'
 import CatImage from './CatImage'
 import { fetchImages } from '../store/actions'
 
-import styles from '../../assets/images.css'
+import styles from '../../assets/css/images.css'
 
 const Images = (props) => {
 
